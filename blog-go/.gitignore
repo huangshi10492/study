@@ -1,0 +1,7 @@
+/.air.toml
+/static
+/tmp
+*.exe
+blog-go
+*.db
+conf.yaml

@@ -1,0 +1,33 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.node.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "noUnusedLocals": true,
+    "strictNullChecks": true,
+    "types": [
+      "vite/client",
+      "vite-plugin-pages/client",
+      "unplugin-icons/types/vue",
+      "vite-plugin-vue-layouts/client",
+      "naive-ui/volar"
+    ],
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.vue",
+    "auto-imports.d.ts",
+    "components.d.ts",
+    "vite.config.ts",
+    "unocss.config.ts"
+  ],
+  "exclude": [
+    "dist",
+    "node_modules"
+  ]
+}
