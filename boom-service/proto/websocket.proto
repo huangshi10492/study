@@ -1,0 +1,41 @@
+syntax = "proto3";
+package websocket;
+
+option go_package = "./;websocket";
+
+enum Type{
+  offer = 0;
+  answer = 1;
+  candidate= 2;
+  keepalive = 3;
+  assist = 4;
+  bye = 5;
+}
+message Body{
+  Type type = 1;
+  string from = 2;
+  string to = 3;
+  string sessionId = 4;
+  bytes data = 5;
+}
+
+message AnswerData{
+  string sdp = 1;
+  string deviceInfo = 2;
+}
+
+message OfferData{
+  string sdp = 1;
+  string deviceInfo = 2;
+  string media = 3;
+}
+
+message CandidateData{
+  string candidate = 1;
+  string sdpMid = 2;
+  int32 sdpMLineIndex = 3;
+}
+
+message AssistData{
+  repeated string publicInfo = 1;
+}

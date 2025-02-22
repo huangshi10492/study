@@ -1,0 +1,20 @@
+syntax = "proto3";
+package transport;
+
+message TextMessage {
+  string type = 1;
+  string content = 2;
+}
+
+message FileData {
+  string name = 1;
+  string md5 = 2;
+  int32 size = 3;
+  int32 chunk_start = 4;
+  bytes chunk = 5;
+}
+
+message FileAck{
+  string md5 = 1;
+  int32 next_chunk = 2;
+}

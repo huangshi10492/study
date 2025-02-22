@@ -1,0 +1,14 @@
+syntax = "proto3";
+package info;
+
+message Public {
+  string deviceId = 1;
+  string publicKey = 2;
+}
+
+message Device {
+  string deviceId = 1;
+  string publicKey = 2;
+  string deviceType = 3;
+  string deviceName = 4;
+}

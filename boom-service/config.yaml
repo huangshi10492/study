@@ -1,0 +1,8 @@
+web:
+  port: 3000
+turn:
+  publicIP: "8.134.132.159"
+  port: 3478
+  realm: "server"
+  startPort: 40000
+  endPort: 50000
